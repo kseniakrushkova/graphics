@@ -1,0 +1,9 @@
+body{
+    background: #000000;
+}
+
+h1,h3{
+    color:#57f7f6;
+    font-family: serif;
+    font-style: oblique;
+}
