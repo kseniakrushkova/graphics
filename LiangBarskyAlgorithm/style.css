@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-left: 50px;
+}
+h1,h3{
+    color:#57f7f6;
+    font-family: serif;
+    font-style: oblique;
+}
