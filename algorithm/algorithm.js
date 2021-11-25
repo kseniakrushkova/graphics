@@ -23,12 +23,12 @@ const addNode = (x, y) => {
     struct.data[a + 3] = y & 255;
     filled[byte] |= 1 << bit;
 };
+
 const fillNode = a => {
     const x = struct.data[a] << 8 | struct.data[a + 1];
     const y = struct.data[a + 2] << 8 | struct.data[a + 3];
     ctx.fillStyle = "#57f7f6";
-    // ctx.fillRect(x * widthAndHeight, y * widthAndHeight, widthAndHeight, widthAndHeight);
-    ctx.fillRect(x , y , widthAndHeight, widthAndHeight);
+    ctx.fillRect(x, y, widthAndHeight, widthAndHeight);
     addNode(x, y - 1);
     addNode(x + 1, y);
     addNode(x, y + 1);
@@ -47,8 +47,6 @@ const loop = () => {
 };
 
 const addFromEvent = ({clientX, clientY}) => {
-    // const x = clientX / widthAndHeight | 0;
-    // const y = clientY / widthAndHeight | 0;
     const x = clientX | 0;
     const y = clientY | 0;
     addNode(x, y, rand(256), rand(256), rand(256));
@@ -64,8 +62,6 @@ const drawClick = () => {
 
 const init = () => {
     canvas = document.getElementById("canvas");
-    // cols = Math.ceil((canvas.width = innerWidth) / widthAndHeight);
-    // rows = Math.ceil((canvas.height = innerHeight) / widthAndHeight);
     cols = Math.ceil(canvas.width = innerWidth);
     rows = Math.ceil(canvas.height = innerHeight);
     ctx = canvas.getContext("2d");
