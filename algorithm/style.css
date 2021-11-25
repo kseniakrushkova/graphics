@@ -1,0 +1,15 @@
+div {
+    background: #000;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    color: #57f7f6;
+    font-family: serif;
+    margin-left: 50px;
+}
+
+body {
+    background: black;
+}
